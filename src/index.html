@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My resume</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+      <div id="header">
+          <span>
+              <h1>Ezkiel Enns</h1>  
+              <div>
+                  <img src="./portfolio.png" width="100px" height="100px">
+                  <a href="https://ezekielenns.github.io/Portfolio/" target="_blank">https://ezekielenns <br/>.github.io/Portfolio/</a>
+              </div>
+          </span>
+          <span class="contact">
+              <a href="https://www.linkedin.com/in/ezekiel-enns/" target="_blank" >
+                  <i class="devicon-linkedin-plain colored"></i> Ezekiel Enns
+              </a>
+              <a href="https://github.com/EzekielEnns" target="blank" > 
+                  <i class="devicon-github-original colored"></i> @ezekielenns
+              </a>
+              <a>
+                  <i style="font-size:1em" class="material-icons">phone_iphone</i> 902-877-0061
+              </a>
+              <a href="mailto:  ezekiel.enns@pm.me">
+                  <i style="font-size:1em" class="material-icons">email</i> Ezekiel.Enns@pm.me 
+              </a>
+          </span>
+      </div>
+
+      <div id="projects">
+        <span class="right-header">
+            <span>Highlighted Projects</span>
+        </span>  
+
+        <div class="section">
+            <h3>React Refactor</h3>
+            <ul>
+                <li>removed memeory leaks caused by bad asnyc calls</li>
+                <li>refactored app to use proper hooks for data fetching</li>
+                <li>debloated components enforced react desgin princples</li>
+                <li>restructed file structre to improve self documention</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Nodejs AWS CDK</h3>
+            <ul>
+                <li>enforced self documneting code standards in stack deffention</li>
+                <li>improved speed of deployment by 300%</li>
+                <li>desgined build scripts using esbuild to improve performance</li>
+                <li>degined unit testing with JEST</li>
+                <li>implemented AWS integreation testing using SAM Cli</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Database Connection Leak</h3>
+            <ul>
+                <li>identidyed bug and reproduced with jmeter</li>
+                <li>desgined wrapper that handled connections</li>
+                <li>tested and implemented throughtout code base</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Gatsby Portfolio</h3>
+            <ul>
+                <li>Used static graphql queires to populate content</li>
+                <li>setup mdx plugin for a CMS like experince</li>
+                <li>created templates with mobile support</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>This Resume</h3>
+            <ul>
+                <li>turned wireframe into webpage</li>
+                <li>used print media quries to easily convert to pdf</li>
+            </ul>
+        </div>
+
+      </div>
+
+      <div id="skills">
+            <span class="left-header">Tools and Concpets</span>
+         <div> <canvas id="myChart" ></canvas> </div>  
+         <script>
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const vals =[5, 4, 4, 1, 3, 1, 3, 2,1,5,4,1,1,1,1,6,4]
+
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Js','Node','React','Php','Sql','Graphql','C','C++','Rust','Python','C#','Java','Docker','Gradel','Aws','OSI','Sockets' ],
+                    datasets: [{
+                        data:vals,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 1.2)',
+                            'rgba(54, 162, 235, 1.2)',
+                            'rgba(255, 206, 86, 1.2)',
+                            'rgba(75, 192, 192, 1.2)',
+                            'rgba(153, 102, 255,1.2)',
+                            'rgba(255, 159, 64, 1.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1,
+                    }]
+                },
+                options: {
+                    layout:{
+                      autoPadding:false,
+                      padding: {
+                        left:-10
+                      }
+                    },
+                    scales: {
+                        y: {
+                           beginAtZero: true,
+                           ticks: {
+                             color: "white",
+                             mirror:true,
+                             z:1,
+                             font:{
+                               weight:"bold"
+                             }
+                           },
+                           grid: { display:false }
+                           
+                        },
+                        x:{
+                           title:{
+                              display:false,
+                              text:'years'
+                           },
+                           grid: { display:false },
+                           position:'top',
+                           ticks: {
+                               min: Math.min.apply(this,vals ),
+                               max: Math.max.apply(this, vals),
+                               color:"black",
+                               font:{ weight:"bold"},
+                               callback: function(value, index, values) {
+                                                if (index === values.length - 1) 
+                                                    return `${Math.max.apply(this, vals)}yrs`;
+                                                else return '';
+                               }
+                           }
+                        }
+                    },
+                    indexAxis:"y",
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title:{
+                            text:'I have Experince with',
+                            display:false
+                        },
+                        legend: { display: false },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'top',
+                        }
+                    }
+                }
+            });
+         </script>
+      </div>
+
+      <div id="workexp">
+        <span class="right-header">
+            <span>Work Experince</span>
+        </span>  
+        <div class="section">
+            <span class="sub">
+                <h3>Full Stack Developer</h3>
+                <text>SaySo Comm Mar 2022 - Present</text>
+            </span>
+            <ul>
+                <li>Hosted weekly Scrum meetings</li>
+                <li>Managed and asgined tickets</li>
+                <li>Documented code base and wrote project charter</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <span class="sub" >
+                <h3>IT Contractor</h3>
+                <text>Broked Computer Inc. 2015 - 2021</text>
+            </span>
+            <ul>
+                <li>Met with clients and drafted IT soltuions</li>
+                <li>Hosted and managed webservers</li>
+                <li>developed automation scripts using bash and python</li>
+                <li>Deployed enturprise networks</li>
+            </ul>
+        </div>
+      </div>
+
+      <div id="edu">
+        <span class="left-header">Education</span>
+        <span class="right-header nobar">
+        </span>
+        <span class="section">
+            <span class="sub" >
+                <h3>Computer Engineering Diploma</h3>
+                <text>Gratuadted 2021</text>
+            </span>
+
+            <div style="padding-left:5px;">Northern Instute of Alberta 1yr</div>
+        </span>
+        <span class="section">
+            <span class="sub" >
+                <h3>Bachlores in Computer Science</h3>
+                <text>Graduating 2024</text>
+            </span>
+
+            <div style="padding-left:5px;">Dalhousie 1yr</div>
+            <div style="padding-left:5px;">Acadia 1yr</div>
+        </span>
+      </div>
+
+  </body>
+</html>

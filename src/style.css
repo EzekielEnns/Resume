@@ -1,0 +1,203 @@
+
+@page {
+  size: A4;
+  margin: 0mm;
+  padding: 0mm;
+}
+a{text-decoration: none;}
+@media print {
+     @page { margin: 0; }
+    a{color: #3366CC;}
+}
+/*
+TODO clean up css 
+TODO convert to react 
+*{
+    outline: 1px solid red;
+}
+*/
+
+html, body {
+    width: 210mm;
+    height: 297mm;
+    padding: 0px;
+}
+html { margin: 10mm; }
+
+body{
+  margin:0px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr 1fr 1fr;
+  gap:20px
+}
+/*Header*/
+#header{
+  grid-column: 1/-1;
+  grid-row: 1/1;
+  display: flex;
+  flex-direction: column;
+  padding:5px
+}
+
+#header > span:nth-child(1) > h1:nth-child(1) {
+ font-size: 3em;
+}
+
+#header>h1 {
+  /*TODO change font*/
+  font-size: 3.5em;
+  align-self: baseline;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+#header > span:nth-child(1) > div:nth-child(2) {
+ position: absolute;
+ /*! top: 35px; */left: 88%;
+ display: flex;
+ flex-direction: column;
+}
+
+#header > span:nth-child(1) > div:nth-child(2) > a:nth-child(2) {
+ font-size: 0.5em;
+ text-align: center;
+}
+
+
+
+#header>span{
+    display: flex;
+    width:100%;
+}
+.contact{
+    font-size: 0.6em;
+}
+a{
+    padding: 5px;
+}
+
+
+/*Projects*/
+#projects{
+  grid-row: 2/4;
+  grid-column: 1/1;
+  display: flex;
+  flex-direction: column;
+}
+.right-header {
+ width: 100%;
+ background: #000;
+ height: 1px;
+ margin-top: 10px;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+
+.right-header > span:nth-child(1) {
+ background: #fff;
+ position: relative;
+ top: -10px;
+ left: 20px;
+ padding: 1mm;
+}
+
+.left-header {
+    font-weight: bold;
+}
+
+.section {
+  font-size: 0.79em;
+}
+.section > h3, .section > ul {
+  margin: 5px;
+}
+
+/*Skills*/
+#skills{
+  display:flex;
+  flex-direction: column;
+  grid-row: 2/4;
+  grid-column: 2/2;
+}
+#skills>div {
+  width: 100%;
+  height: 100%;
+}
+#myChart{
+    margin-bottom:5px;
+    margin-right:5px;
+}
+
+
+/*Work Xp*/
+#workexp{
+  grid-row: 4/4;
+  grid-column: 1/1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section>.sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.section>.sub>h3 {
+    margin: 0;
+}
+.section>ul>li {
+  padding: 0.15em;
+}
+
+#workexp > .section > span > h3 {
+    margin: 0;
+}
+#workexp>.section {
+  padding: 5px;
+}
+
+#edu{
+  grid-row: 4/4;
+  grid-column: 2/2;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-header.nobar{
+ background: #fff;
+}
+
+#test {
+    display: none;
+    position: relative;
+    background: fuchsia;
+    width: 200%;
+    height: 10px;
+    bottom: 100px;
+}
+
+#edu>.section>ul {
+  list-style: none;
+}
+h3 {
+  font-size: inherit;
+}
+#edu>.section {
+  padding-left: 10px;
+}
+
+
+#edu > span:nth-child(2) {
+ margin: 5px;
+}
+
+#edu>.section {
+  padding-left: 18px;
+  padding-bottom: 5px;
+}
+
