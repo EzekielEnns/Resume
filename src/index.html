@@ -12,7 +12,7 @@
   <body>
       <div id="header">
           <span>
-              <h1>Ezkiel Enns</h1>  
+              <h1>Ezekiel Enns</h1>  
               <div>
                   <img src="./portfolio.png" width="100px" height="100px">
                   <a href="https://ezekielenns.github.io/Portfolio/" target="_blank">https://ezekielenns <br/>.github.io/Portfolio/</a>
@@ -28,8 +28,8 @@
               <a>
                   <i style="font-size:1em" class="material-icons">phone_iphone</i> 902-877-0061
               </a>
-              <a href="mailto:  ezekiel.enns@pm.me">
-                  <i style="font-size:1em" class="material-icons">email</i> Ezekiel.Enns@pm.me 
+              <a href="mailto:  Ezekiel.Enns@protonmail.com" target="_blank">
+                  <i style="font-size:1em" class="material-icons">email</i> Ezekiel.Enns@protonmail.com 
               </a>
           </span>
       </div>
@@ -40,48 +40,48 @@
         </span>  
 
         <div class="section">
-            <h3>React Refactor</h3>
+            <h3>Refactoring React Web App</h3>
             <ul>
-                <li>removed memeory leaks caused by bad asnyc calls</li>
-                <li>refactored app to use proper hooks for data fetching</li>
-                <li>debloated components enforced react desgin princples</li>
-                <li>restructed file structre to improve self documention</li>
+                <li>Memeory leaks caused by bad asnyc calls</li>
+                <li>Refactored app to use proper hooks for data fetching</li>
+                <li>Optimized components by enforcing React desgin principles</li>
+                <li>Streamlined file structure to allow for improved self-documentation</li>
             </ul>
         </div>
         <div class="section">
-            <h3>Nodejs AWS CDK</h3>
+            <h3>Improved NodeJS CDK Backend</h3>
             <ul>
-                <li>enforced self documneting code standards in stack deffention</li>
-                <li>improved speed of deployment by 300%</li>
-                <li>desgined build scripts using esbuild to improve performance</li>
-                <li>degined unit testing with JEST</li>
-                <li>implemented AWS integreation testing using SAM Cli</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Database Connection Leak</h3>
-            <ul>
-                <li>identidyed bug and reproduced with jmeter</li>
-                <li>desgined wrapper that handled connections</li>
-                <li>tested and implemented throughtout code base</li>
+                <li>Enforced self-documenting code standards in stack definition</li>
+                <li>Increased speed of deployment process by 300%</li>
+                <li>Designed build scripts using esbuild to improve performance</li>
+                <li>Created JEST Mocks and implemented Unit Test</li>
+                <li>Implemented AWS integration testing using SAM Cli</li>
             </ul>
         </div>
 
         <div class="section">
-            <h3>Gatsby Portfolio</h3>
+            <h3>Resolved Database Connection Leak</h3>
             <ul>
-                <li>Used static graphql queires to populate content</li>
-                <li>setup mdx plugin for a CMS like experince</li>
-                <li>created templates with mobile support</li>
+                <li>Identified bug with database connection and reproduced it with jmeter</li>
+                <li>Designed a wrapper function to handled database connections</li>
+                <li>Tested and implemented new wrapper throughout the code base</li>
             </ul>
         </div>
 
         <div class="section">
-            <h3>This Resume</h3>
+            <h3>Created Portfolio With Gatsby</h3>
             <ul>
-                <li>turned wireframe into webpage</li>
-                <li>used print media quries to easily convert to pdf</li>
+                <li>Used static graphical queries to populate content</li>
+                <li>Setup an mdx plugin for a CMS-like experience</li>
+                <li>Created templates with mobile support</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Made Resume Using CSS</h3>
+            <ul>
+                <li>Turned wireframe into webpage</li>
+                <li>Used print media quries to easily convert to pdf</li>
             </ul>
         </div>
 
@@ -89,32 +89,36 @@
 
       <div id="skills">
             <span class="left-header">Tools and Concpets</span>
+            <div style="color: white; font-size:0.1em; right:50px;position: absolute; height:10px;width:100px; ">    
+                IF you found this its a little hack im trying out to get around ATS, 
+            </div>
          <div> <canvas id="myChart" ></canvas> </div>  
          <script>
             const ctx = document.getElementById('myChart').getContext('2d');
             const vals =[5, 4, 4, 1, 3, 1, 3, 2,1,5,4,1,1,1,1,6,4]
+            const lb= ['Js','Node','React','Php','Sql','Graphql','C','C++','Rust','Python','C#','Java','Docker','Gradel','Aws','OSI','Sockets' ]
 
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Js','Node','React','Php','Sql','Graphql','C','C++','Rust','Python','C#','Java','Docker','Gradel','Aws','OSI','Sockets' ],
+                    labels:lb,
                     datasets: [{
                         data:vals,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 1.2)',
-                            'rgba(54, 162, 235, 1.2)',
-                            'rgba(255, 206, 86, 1.2)',
-                            'rgba(75, 192, 192, 1.2)',
-                            'rgba(153, 102, 255,1.2)',
-                            'rgba(255, 159, 64, 1.2)'
+                            'rgba(247,101, 163, 0.8)',
+                            'rgba(22, 91, 170, 0.8)',
+                            'rgba(161, 85, 185, 0.8)',
+                            'rgba(255, 164, 182, 0.8)',
+                            'rgba(11, 19, 84,0.7)',
+                            'rgba(247,101, 163, 0.8)',
                         ],
                         borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                            'rgba(247,101, 163, 1)',
+                            'rgba(22, 91, 170, 1)',
+                            'rgba(161, 85, 185, 1)',
+                            'rgba(255, 164, 182, 1)',
+                            'rgba(11, 19, 84,0.7)',
+                            'rgba(247,101, 163, 0.8)',
                         ],
                         borderWidth: 1,
                     }]
@@ -181,7 +185,7 @@
 
       <div id="workexp">
         <span class="right-header">
-            <span>Work Experince</span>
+            <span>Work Experience</span>
         </span>  
         <div class="section">
             <span class="sub">
@@ -189,9 +193,12 @@
                 <text>SaySo Comm Mar 2022 - Present</text>
             </span>
             <ul>
-                <li>Hosted weekly Scrum meetings</li>
-                <li>Managed and asgined tickets</li>
-                <li>Documented code base and wrote project charter</li>
+                <li>Host weekly Scrum meetings</li>
+                <li>Managed and assigned 7 tickets a week</li>
+                <li>Responsible for maintaining and documenting a large code base</li>
+                <li>Refactor REST API’s and React application using best practices</li>
+                <li>Manage AWS Configurations and overall cloud infrastructure</li>
+                <li>Implement DevOPS solutions such as build tooling and testing suites</li>
             </ul>
         </div>
 
@@ -201,10 +208,10 @@
                 <text>Broked Computer Inc. 2015 - 2021</text>
             </span>
             <ul>
-                <li>Met with clients and drafted IT soltuions</li>
+                <li>Designed and implemented IT solutions for a large range of businesses</li>
                 <li>Hosted and managed webservers</li>
-                <li>developed automation scripts using bash and python</li>
-                <li>Deployed enturprise networks</li>
+                <li>Performed various software and hardware deployments</li>
+                <li>Developed automation scripts using bash and python</li>
             </ul>
         </div>
       </div>
@@ -216,10 +223,10 @@
         <span class="section">
             <span class="sub" >
                 <h3>Computer Engineering Diploma</h3>
-                <text>Gratuadted 2021</text>
+                <text>Graduated 2021</text>
             </span>
 
-            <div style="padding-left:5px;">Northern Instute of Alberta 1yr</div>
+            <div style="padding-left:5px;">Northern Institute of Alberta attended 2 years</div>
         </span>
         <span class="section">
             <span class="sub" >
@@ -227,8 +234,8 @@
                 <text>Graduating 2024</text>
             </span>
 
-            <div style="padding-left:5px;">Dalhousie 1yr</div>
-            <div style="padding-left:5px;">Acadia 1yr</div>
+            <div style="padding-left:5px;">Dalhousie attended 1 year</div>
+            <div style="padding-left:5px;">Acadia attended 1 year</div>
         </span>
       </div>
 
